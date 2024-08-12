@@ -5,8 +5,9 @@ body {
     line-height: 1.6;
 }
 
+/* Header styles */
 header {
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -14,30 +15,33 @@ header {
     padding-bottom: 10px;
     position: sticky;
     top: 0;
-    z-index: 1000; /* Ensure it stays on top of other content */
+    z-index: 1000;
     width: 100%;
-    background-color:white;
+    background-color: white;
 }
 
 .logo {
-    font-size: 100px; /* Initial font size */
+    font-size: 40px; /* Adjusted for smaller screens */
     font-weight: bold;
-    transition: font-size 0.5s ease; /* Smooth transition */
+    transition: font-size 0.5s ease;
+    width: 100%;
 }
 
 .logo a {
     text-decoration: none;
     color: #000;
 }
-
-.logo-icon {
-    font-size: 100px;
+nav {
+    border-top: 1px solid #000; /* Optional: border to separate logo and nav */
+    padding-top: 10px;
 }
 
 nav ul {
-    display: flex;
     list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -46,27 +50,92 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000;
+    color: black;
+    font-weight: bold;
 }
 
-.language-toggle a {
-    margin-left: 10px;
-    text-decoration: none;
-    color: #000;
+
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 28px; /* Smaller logo font size */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #000;
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    table td {
+        padding: 8px 0;
+    }
+
+    button {
+        font-size: 14px;
+    }
 }
 
-.all-nav {
-    float: right;
-    font-weight: normal;
+/* Styling for main content */
+#main-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.centered-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Gallery styling */
 .gallery {
     display: flex;
     justify-content: space-between;
@@ -87,9 +156,11 @@ h2 {
     font-size: 14px;
 }
 
+/* Upcoming events section */
 #upcoming-events {
     border-top: 1px solid #000;
     padding-top: 20px;
+    margin-bottom: 40px;
 }
 
 table {
@@ -116,15 +187,47 @@ button {
     margin-top: 20px;
 }
 
-
-#main-page {
+.newsletter-follow {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
-.centered-image {
-    max-width: 100%; /* Ensure the image fits within the width of the window */
-    height: auto; /* Maintain the aspect ratio of the image */
+.newsletter, .follow {
+    width: 45%;
+    border: 1px solid #000;
+    padding: 20px;
+}
+
+.newsletter h2, .follow h2 {
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #000;
+}
+
+.follow a {
     display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid blue;
+    text-decoration: none;
+    color: blue;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.follow a:hover {
+    background-color: lightblue;
 }

@@ -1,19 +1,18 @@
-document.onreadystatechange = function () {
-  if (document.readyState == "interactive") {    
-    // Select the text element to animate
-    const textElement = document.querySelector('.logo');
+const menuButton = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('#site-nav');
 
-    // Add an event listener to the window for the scroll event
-    window.addEventListener('scroll', () => {
-      // Get the current scroll position
-      const scrollPosition = window.scrollY;
+menuButton?.addEventListener('click', () => {
+  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+  menuButton.setAttribute('aria-expanded', String(!isOpen));
+  navigation?.classList.toggle('open', !isOpen);
+});
 
-      // Calculate the new font size based on the scroll position
-      const newFontSize = Math.max(20, 40 - scrollPosition / 10); // Adjust the values as needed
+navigation?.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', () => {
+    menuButton?.setAttribute('aria-expanded', 'false');
+    navigation.classList.remove('open');
+  });
+});
 
-      // Apply the new font size to the text element
-      textElement.style.fontSize = newFontSize + 'px';
-    });
-
-  }
-}
+const year = document.querySelector('#year');
+if (year) year.textContent = String(new Date().getFullYear());

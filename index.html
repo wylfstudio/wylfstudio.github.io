@@ -3,84 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <title>WYLF Studio</title>
+    <meta name="description" content="WYLF Studio is an international multidisciplinary consulting firm delivering practical expertise across IT, operations, and business strategy.">
+    <meta name="theme-color" content="#f2f0e9">
+    <title>WYLF Studio — IT, Operations & Business Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo"><a href="/">WYLF ⧉</a></div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                </ul>
-            </nav>
-        </header>
-    
-        <main>
-            <section id="main-page">
-                <img src="concept1.jpg" alt="What do you live for-WYLF studio concept image." class="centered-image">
-            </section>
-            <!-- <section id="collection">
-                <h2>Collection <span class="all-nav">All < ></span></h2>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="path_to_image1.jpg" alt="Oskar Kokoschka, Friends">
-                        <p>Oskar Kokoschka, Friends, 1917/18</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="path_to_image2.jpg" alt="Franz Gertsch, Saintes Maries de la Mer III">
-                        <p>Franz Gertsch, Saintes Maries de la Mer III, 1972</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="path_to_image3.jpg" alt="Keith Haring, Red – Yellow – Blue No Portrait of Martin">
-                        <p>Keith Haring, Red – Yellow – Blue No Portrait of Martin, 1987</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="path_to_image4.jpg" alt="Maria Lassnig, Self with a Telephone">
-                        <p>Maria Lassnig, Self with a Telephone, 1973</p>
-                    </div>
+    <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="WYLF Studio home">
+            <span class="wordmark-mark" aria-hidden="true">W</span>
+            <span>WYLF Studio</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span></span><span></span>
+        </button>
+        <nav id="site-nav" aria-label="Primary navigation">
+            <a href="#expertise">Expertise</a>
+            <a href="#approach">Approach</a>
+            <a href="#leadership">Leadership</a>
+            <a class="nav-cta" href="mailto:wylfstudio@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> International multidisciplinary consulting</p>
+                <h1 id="hero-title">Clarity for complex<br><em>business systems.</em></h1>
+                <p class="hero-intro">We help organizations align technology, operations, and strategy—turning difficult questions into practical, measurable progress.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="mailto:wylfstudio@gmail.com">Discuss a challenge <span aria-hidden="true">↗</span></a>
+                    <a class="text-link" href="#expertise">Explore our expertise <span aria-hidden="true">↓</span></a>
                 </div>
-            </section> -->
-    
-            <section id="upcoming-events">
-                <h2>Upcoming events</h2>
-                <table>
-                    <tr>
-                        <td>Sat 10.08</td>
-                        <td>WYLF Studio Launching Party</td>
-                        <td>6:00 pm–11:00 pm EST</td>
-                    </tr>
-                    <tr>
-                        <td>Sun 11.08</td>
-                        <td>Guided tour for "The Journey of the project TCL - Time_Capsule_Letter"</td>
-                        <td>4:00 pm–5:00 pm EST</td>
-                    </tr>
-                    <!-- Add more rows for other events -->
-                </table>
-                <button>Show all events</button>
-            </section>
-    
-            
-            <section class="newsletter-follow">
-                <div class="newsletter">
-                    <h2>Newsletter</h2>
-                    <form target="_blank" action="https://formsubmit.io/send/wylfstudio@gmail.com" method="POST">
-                        <input type="email" placeholder="Email" required>
-                        <input name="_formsubmit_id" type="text" style="display:none">
-                        <input hidden name="message" value="Hey! I want to subscribe to your newsletter." type="text">                    
-                        <button type="submit">Subscribe</button>
-                     </form>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="visual-label label-one">Technology</div>
+                <div class="visual-label label-two">Operations</div>
+                <div class="visual-label label-three">Business</div>
+                <div class="visual-core"><span>Integrated</span><strong>thinking</strong></div>
+            </div>
+            <div class="hero-meta">
+                <span>Based in Toronto</span>
+                <span>Working internationally</span>
+                <span>Cross-domain perspective</span>
+            </div>
+        </section>
+
+        <section class="statement" aria-label="Our perspective">
+            <p class="section-number">01 / Perspective</p>
+            <p class="statement-text">The hardest problems rarely fit into a single discipline. We work across boundaries to connect the <strong>technical</strong>, the <strong>operational</strong>, and the <strong>commercial.</strong></p>
+        </section>
+
+        <section class="expertise section" id="expertise" aria-labelledby="expertise-title">
+            <div class="section-heading">
+                <p class="section-number">02 / Expertise</p>
+                <h2 id="expertise-title">Three lenses.<br>One clear direction.</h2>
+            </div>
+            <div class="service-list">
+                <article class="service-card">
+                    <div class="service-top"><span>01</span><span class="service-icon" aria-hidden="true">↗</span></div>
+                    <h3>Information<br>Technology</h3>
+                    <p>Technology strategy and systems thinking that connect digital capabilities to real organizational needs.</p>
+                    <ul><li>Digital strategy</li><li>Systems analysis</li><li>Technology advisory</li></ul>
+                </article>
+                <article class="service-card featured">
+                    <div class="service-top"><span>02</span><span class="service-icon" aria-hidden="true">↗</span></div>
+                    <h3>Operations</h3>
+                    <p>Rigorous analysis and practical redesign for more resilient, efficient, and scalable operations.</p>
+                    <ul><li>Process improvement</li><li>Decision analytics</li><li>Operational design</li></ul>
+                </article>
+                <article class="service-card">
+                    <div class="service-top"><span>03</span><span class="service-icon" aria-hidden="true">↗</span></div>
+                    <h3>Business<br>Advisory</h3>
+                    <p>Evidence-based strategy for organizations navigating growth, change, and complex markets.</p>
+                    <ul><li>Business strategy</li><li>Organizational change</li><li>Research & insight</li></ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="approach section" id="approach" aria-labelledby="approach-title">
+            <div class="section-heading">
+                <p class="section-number">03 / How we work</p>
+                <h2 id="approach-title">From ambiguity<br>to action.</h2>
+            </div>
+            <ol class="process-list">
+                <li><span class="process-number">01</span><div><h3>Frame</h3><p>We clarify the real question, the context around it, and what success needs to look like.</p></div></li>
+                <li><span class="process-number">02</span><div><h3>Understand</h3><p>We bring together data, people, processes, and systems to build a complete view.</p></div></li>
+                <li><span class="process-number">03</span><div><h3>Design</h3><p>We develop focused recommendations that balance ambition with operational reality.</p></div></li>
+                <li><span class="process-number">04</span><div><h3>Enable</h3><p>We turn direction into a practical path forward that your organization can own.</p></div></li>
+            </ol>
+        </section>
+
+        <section class="leadership section" id="leadership" aria-labelledby="leadership-title">
+            <div class="leader-panel">
+                <div class="leader-monogram" aria-hidden="true"><span>SN</span></div>
+                <div class="leader-intro">
+                    <p class="section-number">04 / Leadership</p>
+                    <p class="leader-role">Founder & Chief Executive Officer</p>
+                    <h2 id="leadership-title">Somang Nam,<br><em>Ph.D.</em></h2>
+                    <p>Somang brings a rare combination of industrial engineering, computer science, mathematics, and cultural inquiry to complex organizational challenges. His multidisciplinary foundation shapes WYLF Studio&apos;s analytical, human-centered approach.</p>
                 </div>
-                <div class="follow">
-                    <h2>Follow</h2>
-                    <a href="https://www.instagram.com/wylfstudio/" target="_blank">Instagram</a>
+                <div class="credentials">
+                    <p class="credentials-label">Academic background</p>
+                    <div class="credential"><span>2021</span><p><strong>Ph.D., Industrial Engineering</strong>University of Toronto</p></div>
+                    <div class="credential"><span>2016</span><p><strong>M.Sc., Computer Science</strong>Toronto Metropolitan University</p></div>
+                    <div class="credential"><span>HBSc</span><p><strong>Computer Science, Mathematics & Ethnomusicology</strong>Trinity College, University of Toronto</p></div>
                 </div>
-            </section>
-        </main>
-    </div>
+            </div>
+        </section>
+
+        <section class="contact" aria-labelledby="contact-title">
+            <p class="section-number">05 / Start a conversation</p>
+            <div class="contact-grid">
+                <h2 id="contact-title">What challenge are<br><em>you working through?</em></h2>
+                <div><p>Tell us where you are and where you need to go. We&apos;ll help you find the clearest path between them.</p><a class="button button-light" href="mailto:wylfstudio@gmail.com">wylfstudio@gmail.com <span aria-hidden="true">↗</span></a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a class="wordmark footer-mark" href="#top"><span class="wordmark-mark">W</span><span>WYLF Studio</span></a>
+        <p>IT · Operations · Business</p>
+        <p>© <span id="year">2026</span> WYLF Studio</p>
+    </footer>
 </body>
 </html>
